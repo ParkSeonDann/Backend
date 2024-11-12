@@ -7,7 +7,7 @@ WORKDIR /app
 # Copia el archivo requirements.txt y luego instala las dependencias
 COPY requirements.txt .
 # RUN pip install --no-cache-dir -r requirements.txt
-RUN python -m venv --symlinks /opt/venv && pip install -r requirements.txt
+RUN python -m venv --symlinks /opt/venv && /opt/venv/bin/pip install -r requirements.txt
 
 
 # Copia el resto de los archivos del proyecto al contenedor
